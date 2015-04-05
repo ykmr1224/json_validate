@@ -1,6 +1,30 @@
-# JsonValidate
+# JSONValidate
 
-TODO: Write a gem description
+This gem offers very simple way to validate parsed JSON object.
+Suppose your program expect an input JSON as below.
+
+```json
+    {
+      "id": 100,
+      "title": "Some title",
+      "tags": ["funny", "cute"]
+    }
+```
+
+It can be validated by the following code.
+
+```ruby
+    # assume json_str contains the JSON input
+    object = JSON.parse(json_str)
+    object.validate( {id: Fixnum, title: String, tags: [String]} )
+```
+
+If the JSON doesn't have designated structure, validate method raise a ValidationError.
+
+```ruby
+    object = JSON.parse('{"hoge": 1}')
+    object.validate( {id:Fixnum} ) # => raise ValidationError
+```
 
 ## Installation
 
@@ -18,7 +42,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+
 
 ## Contributing
 

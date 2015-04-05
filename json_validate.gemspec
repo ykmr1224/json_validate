@@ -5,11 +5,11 @@ require 'json_validate/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "json_validate"
-  spec.version       = JsonValidate::VERSION
-  spec.authors       = ["ykmr1224"]
+  spec.version       = JSONValidate::VERSION
+  spec.authors       = ["Tomoyuki Morita"]
   spec.email         = ["ykmr1224@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Offers simple way to validate JSON object having expected structure.}
+  spec.summary       = %q{Offers simple way to validate JSON object having expected structure.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
